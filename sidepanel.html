@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./sidepanel.css">
+</head>
+
+<body>
+    <div class="snoopy-header">
+        <h1 class="snoopy-title">
+            snoopy
+        </h1>
+    </div>
+    <div class="snoopy-container">
+        <div class="snoopy-radio-form">
+            <input type="radio" id="assortment-radio" name="snoopy" value="assortment" />
+            <label class="snoopy-radio-label" for="assortment-radio">Assortment Gap</label>
+        </div>
+        <div id="assortment-form">
+            <form class="snoopy-form">
+                <div>
+                    <label class="snoopy-bold-label" for="snoopy_category">What did you not find? Please type in detail
+                        below:</label><br />
+                    <textarea class="snoopy-input" type="text" id="snoopy_category" name="snoopy_category"
+                        placeholder="(Lenovo tablets has less selection vs Amazon)"></textarea><br />
+                </div>
+                <div>
+                    <label class="snoopy-bold-label" for="snoopy_competitor_url">Country:</label>
+                    <br />
+                    <div class="snoopy-radio-container snoopy-country-toggle">
+                        <input type="radio" id="AE" name="snoopy_country" value="AE">
+                        <label for="AE">AE</label>
+                        <input type="radio" id="SA" name="snoopy_country" value="SA">
+                        <label for="SA">SA</label>
+                        <input type="radio" id="EG" name="snoopy_country" value="EG">
+                        <label for="EG">EG</label>
+                        <span class="faux-selector"></span>
+                    </div>
+                </div>
+                <div>
+                    <label class="snoopy-bold-label" for="snoopy_assortment">Category present in noon:</label>
+                    <div class="snoopy-radio-container">
+                        <input type="radio" id="not_present" name="snoopy_assortment" value="not_present">
+                        <label class="snoopy-radio-label" for="not_present">Not present at all</label>
+                    </div>
+                    <div class="snoopy-radio-container">
+                        <input type="radio" id="not_present_express" name="snoopy_assortment"
+                            value="not_present_express">
+                        <label class="snoopy-radio-label" for="not_present_express">Not present on express</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="snoopy-bold-label" for="snoopy_competitor_url">
+                        URL of the missing selection (from
+                        competitor):
+                    </label>
+                    <br />
+                    <input class="snoopy-input" type="url" id="snoopy_competitor_url" name="snoopy_competitor_url"
+                        placeholder="https://www.amazon.ae/s?k=lenovo+tablets">
+                    <br />
+                </div>
+                <div>
+                    <label class="snoopy-bold-label" for="snoopy_attachment">
+                        Image/attachment of category:
+                    </label>
+                    <br />
+                    <div class="snoopy-radio-container">
+                        <input type="radio" id="none-attachment" name="snoopy_attachment" value="none" checked>
+                        <label class="snoopy-radio-label" for="none-attachment">None</label>
+                    </div>
+                    <div class="snoopy-radio-container">
+                        <input type="radio" id="file-attachment" name="snoopy_attachment" value="file" accept="image/png, image/gif, image/jpeg">
+                        <label class="snoopy-radio-label" for="file-attachment">File upload</label>
+                    </div>
+                    <div id="file-container" style="display: none;">
+                        <input class="snoopy-input" type="file" id="snoopy_file" name="snoopy_file">
+                        <label for="snoopy_file">
+                            <svg id="snoopy_file_icon" xmlns="http://www.w3.org/2000/svg" width="20" height="17"
+                                viewBox="0 0 20 17">
+                                <path
+                                    d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                                </path>
+                            </svg>
+                            <span id="snoopy_file_label">Choose a file</span>
+                        </label>
+                    </div>
+                    <!-- <div class="snoopy-radio-container">
+                        <input type="radio" id="screenshot-attachment" name="snoopy_attachment" value="screenshot">
+                        <label class="snoopy-radio-label" for="screenshot-attachment">Get Screenshot</label>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+        <div class="snoopy-radio-form">
+            <input type="radio" id="others-radio" name="snoopy" value="others" />
+            <label class="snoopy-radio-label" for="others-radio">Others</label>
+        </div>
+        <div id="others-form">
+            <form class="snoopy-form">
+                <div>
+                    <label class="snoopy-bold-label" for="snoopy_others">Add any comments:</label>
+                    <br />
+                    <textarea class="snoopy-input" type="text" id="snoopy_others" name="snoopy_others"
+                        placeholder="Add in your comments here..."></textarea>
+                    <br />
+                </div>
+            </form>
+        </div>
+        <button id="snoopy_submit" disabled>Submit</button>
+    </div>
+    <script src="./sidepanel.js"></script>
+</body>
+
+</html>

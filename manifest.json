@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Snoopy Extension (noon.com)",
+    "description": "This allows users to identify and submit product categories that are not offered by noon.",
+    "author": "ubaid zakir (uzakir@noon.com)",
+    "version": "1.0",
+    "action": {
+        "default_title": "Click to open Snoopy",
+        "default_icon": {
+            "16": "/images/snoopy_icon.png",
+            "32": "/images/snoopy_icon.png",
+            "48": "/images/snoopy_icon.png",
+            "128": "/images/snoopy_icon.png"
+        }
+    },
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "side_panel": {
+        "default_path": "/sidepanel/sidepanel.html"
+    },
+    "permissions": [
+        "activeTab",
+        "sidePanel",
+        "tabs"    
+    ],
+    "host_permissions": [
+        "https://www.noon.com/*",
+        "https://script.google.com/*",
+        "https://script.googleusercontent.com/*"
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+B",
+                "mac": "Command+B"
+            }
+        }
+    }
+}

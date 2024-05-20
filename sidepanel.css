@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 12px;
+}
+
+.snoopy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 320px;
+  padding: 5px 10px;
+}
+
+.snoopy-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  min-width: 320px;
+  background-color: #fff;
+}
+
+h1.snoopy-title {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-style: bold;
+  font-family: "Croissant One", serif;
+  color: #a2001d;
+  margin: 2px auto;
+}
+
+/* main radio optiom (top level) */
+.snoopy-radio-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 5px 0 5px -5px;
+}
+
+label.snoopy-radio-label {
+  margin: 3px 0 0 6px;
+}
+
+label.snoopy-bold-label {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* inner forms */
+#assortment-form,
+#others-form {
+  display: none;
+  color: #333;
+  width: calc(100% - 20px);
+  min-width: 250px;
+  padding: 5px 10px 0;
+  height: auto;
+}
+
+.snoopy-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.snoopy-form > div {
+  padding: 4px 0 6px;
+  margin: 4px 0;
+}
+
+.snoopy-form div.snoopy-radio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 5px;
+  margin-left: -5px;
+}
+
+.snoopy-form .snoopy-input {
+  padding: 5px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50;
+  resize: vertical;
+  font-size: 11px;
+}
+
+.snoopy-form .snoopy-input:focus {
+  moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #000;
+  outline-width: 0;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+}
+
+.snoopy-form .snoopy-input::placeholder {
+  font-size: 11px;
+  color: #bababa;
+}
+
+.snoopy-form div.snoopy-country-toggle {
+  position: relative;
+  display: inline-block;
+  padding: 2px 3px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.snoopy-form div.snoopy-country-toggle label {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  color: #95a5a6;
+  height: 27px;
+  width: 27px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.snoopy-form div.snoopy-country-toggle input {
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.snoopy-form div.snoopy-country-toggle span.faux-selector {
+  height: 27px;
+  width: 27px;
+  line-height: 27px;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.snoopy-form
+  div.snoopy-country-toggle
+  input[value="AE"]:checked
+  ~ span.faux-selector {
+  background: #a2001d;
+  left: 3px;
+  color: #fff;
+}
+
+.snoopy-form
+  div.snoopy-country-toggle
+  input[value="SA"]:checked
+  ~ span.faux-selector {
+  background: #199d00;
+  left: 33px;
+}
+.snoopy-form
+  div.snoopy-country-toggle
+  input[value="EG"]:checked
+  ~ span.faux-selector {
+  background: #85693d;
+  left: 64px;
+}
+
+.snoopy-form div.snoopy-country-toggle input[value="AE"]:checked + label,
+.snoopy-form div.snoopy-country-toggle input[value="SA"]:checked + label {
+  color: #fff;
+}
+.snoopy-form div.snoopy-country-toggle input[value="EG"]:checked + label {
+  color: #fff;
+}
+
+.snoopy-form #file-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 22px 5px;
+}
+
+.snoopy-form #file-container > #snoopy_file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.snoopy-form #file-container > #snoopy_file + label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 6px;
+  max-width: 80%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 5px 15px;
+  color: #333;
+  border: 2px solid currentColor;
+  transition: all 250ms ease-in-out;
+  opacity: 1;
+}
+
+.snoopy-form #file-container > #snoopy_file + label:hover {
+  opacity: 0.5;
+}
+
+.snoopy-form #file-container #snoopy_file_label {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.snoopy-form #file-container #snoopy_file_icon {
+  width: 14px;
+  height: 14px;
+}
+
+#snoopy_submit {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin: 15px auto 5px;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+  box-shadow: none;
+  background-color: #333;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  opacity: 1;
+}
+
+#snoopy_submit:disabled {
+  border: 1px solid #ccc;
+  cursor: auto;
+  opacity: 0.75;
+}
+
+#snoopy_submit:hover:not(:disabled) {
+  /* color: #000;
+  border: 1px solid #000; */
+  opacity: 0.75;
+}
